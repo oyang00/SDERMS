@@ -96,6 +96,6 @@ public class FormsCtrl {
     @ParamValidation({@Param(value = "id", method = Method.NUMBER), @Param("feedback")})
     public Wrapper<String> feedback(WrapParams wrapParams) {
         return formsService.updateFormFeedback(((UserToken) wrapParams.getTokenValue("user")).getAccount(),
-                wrapParams.getLongValue("id"), wrapParams.getString("feedback"));
+                 wrapParams.getLongValue("id"), wrapParams.getString("feedback"));
     }
 }
